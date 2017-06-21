@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="bs/css/bootstrap.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/zepto.min.js"></script>		
+		<script src="js/h-nav.js"></script>
+		<script src="js/content.js"></script>
+		<script>
+			document.getElementsByTagName("html")[0].style.fontSize=innerWidth/16+"px";			
+		</script>
+		<title></title>
+		<style>
+			#lb li{
+				line-height:40px;
+				margin:0 0 5px;
+				background:#fff;
+				font-size:14px;
+				z-index:999;
+				position:relative;
+			}
+			#lb li p{
+				width:100%;
+				display:flex;
+				flex-wrap:wrap;
+			}
+			#lb li p span{
+				font-size:12px;
+				position:absolute;
+				bottom:-13px;
+				right:0;
+				color:#ccc;
+			}
+			#lb li:nth-of-type(2n+1){
+				border-left:3px solid orangered;
+			}
+			#lb li:nth-of-type(2n){
+				border-left:3px solid royalblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" id="container">
+			<header>
+				<span class="glyphicon glyphicon-tasks" id="all">
+					<div class="zz" id="zz">
+						<ul class="all-nav">
+							<h2>记一记</h2>
+							<li>全部</li>
+							<li>今天</li>
+							<li>本周</li>
+							<li>上周</li>
+							<li>新增分组</li>
+							<li>修改组名</li>
+						</ul>
+					</div>
+					
+				</span>全部<span>记一记</span><i class="glyphicon glyphicon-search"></i>
+				<span class="h-nav" id="h-nav">┇
+						<ul class="h-nav-c">
+							<li>列表</li>
+							<li>缩略图</li>
+							<li>设置密码</li>
+						</ul>
+				<span>
+			</header>
+			<section id="sec">
+				<div id="sj">
+					<ul id="lb">
+					</ul>
+				</div>
+			</section>
+			<div class="bj"><i class="glyphicon glyphicon-pencil"></i></div>
+		</div>
+		<script>
+			$(function(){
+				$(".bj").on("tap",function(){
+					window.location.href="update.html";
+				})
+			})
+		</script>	
+	</body>
+</html>

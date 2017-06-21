@@ -1,0 +1,177 @@
+$sc:20;
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+%wh{
+    width:100%;
+    height:100%;
+}
+%slh{
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+%fleft{
+    float:left;
+}
+%fright{
+    float:right;
+}
+%clear{
+    clear:both;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:black;
+    
+}
+@mixin pos($p:absolute){
+    position:$p;
+}
+html,body{
+    @extend %wh;
+    overflow:hidden;
+    @include pos(relative);
+}
+.container{
+    @extend %wh;
+    @include pos(relative);
+    header{
+        @include pos(fixed);
+        top:0;
+        width:100%;
+        height:40px;
+        background:#9BA6BC;
+        line-height:40px;
+        display:flex;
+        padding:0 0 0 5px;
+        color:#fff;
+        font-size:16px;
+        z-index:99999999999;
+        i{
+            width:40px;
+            margin:10px 0;
+            line-height:20px; 
+            @include pos();
+            right:30px;  
+        }
+        span:nth-of-type(1){
+            display:inline-block;
+            padding:13px 2px 0 3px;
+            @include pos(relative);
+            .zz{
+                @include pos();
+                top:0px;
+                left:-5px;
+                margin:0;
+                padding:0;
+                width:320/$sc+rem;
+                height:28.4rem;
+                background:rgba(0,0,0,0.3);
+                display:none;
+                .all-nav{
+                    z-index:99999;
+                    @include pos(fixed);
+                    top:0px;
+                    left:-110px;
+                    width:100px;
+                    height:28.4rem;
+                    background:#9BA6BC;
+                    font-size:12px;
+                    transition:all 1s;
+                    h2{
+                        width:100%;
+                        height:40px;
+                        line-height:40px;
+                        text-align:center;
+                    }
+                    li{
+                        width:100%;
+                        height:30px;
+                        line-height:30px;
+                        text-align:center;
+                        background:#9BA6BC;
+                    }
+                    li:nth-of-type(1){
+                        background:#A6AFC0;
+                    }
+                    li:nth-of-type(4){
+                        margin:0 0 230/$sc+rem;
+                        border-bottom:1px solid #A3ABBE;
+                    }
+                }
+            }
+        }
+        span:nth-of-type(2){
+            margin:0 0 0 90/$sc+rem;
+            text-align:center;
+//          @include pos();
+//          left:45%;
+        }
+        .h-nav{
+            display:inline-block;
+            width:30px;
+            @include pos();
+            right:0;
+            margin:0 0 0 5px;
+            text-align:center;
+            ul{
+                @include pos();
+                z-index:99999999999;
+                top:40px;
+                left:-50px;
+                width:70px;
+                height:90px;
+                background:#9BA6BC;
+                display:none;
+                font-size:12px;
+                li{
+                    width:100%;
+                    height:30px;
+                    background:#9BA6BC;
+                    line-height:30px;
+                    text-align:center;
+                }
+            }
+        }
+    }
+    section{
+        background:#FBFBFB;padding:0 0 30px;
+    }
+    #sj{
+        @include pos();
+        top:40px;
+        z-index:9999;
+        width:100%;
+        height:100%;
+        background:#FBFBFB;
+        overflow:auto;
+        
+        #lb{
+            margin:0 0 80px;
+        }
+    }
+    .bj{
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        @include pos(fixed);
+        right:20px;
+        bottom:30px;
+        background:#9BA6BC;
+        text-align:center;
+        z-index:99999999999;
+        i{
+            @include pos();
+            top:15px;
+            left:15px;
+            color:#fff;
+        }
+    }
+}

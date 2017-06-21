@@ -1,0 +1,57 @@
+.top{
+    width: 100%;
+    height: 50px;
+    background: #94A0B6;
+    color: #fff;
+    padding: 10px;
+    line-height: 30px;
+    position: relative;
+    span:nth-child(1){
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top:20px;
+        color:#fff;
+    }
+    span:nth-child(2){
+        position: absolute;
+        left: 50px;
+    }
+}
+.on{
+    background: #94A0B6;
+}
+section{
+    .nav{
+        width: 80%;
+        height: 100%;
+        margin: 50px auto;
+        p{
+            text-align: center;
+            line-height: 50px;
+        }
+        .list{
+            li{
+                width: 20px;
+                height: 20px;
+                border: 1px solid #94A0B6;
+                border-radius: 50%;
+                float: left;
+                margin: 22px;
+            }
+        }
+        .num{
+            width: 100%;
+            height: 300px;
+            margin: 30px 0;
+            span{
+                display: inline-block;
+                width: 32%;
+                font-size: 24px;
+                text-align: center;
+                line-height: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
